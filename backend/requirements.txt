@@ -1,0 +1,6 @@
+django
+mysqlclient
+django-environ
+django-webpack-loader
+requests
+django-cors-headers

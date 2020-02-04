@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db:
+    image: mysql:8
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --default-authentication-plugin=mysql_native_password
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: image_annotation_app
+      MYSQL_USER: hugo
+      MYSQL_PASSWORD: password
+    volumes:
+      - ./data:/var/lib/mysql
+    restart: always
